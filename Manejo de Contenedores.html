@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    .text{
+        font-family: 'Winky Sans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .titulo{
+        font-family: 'Yatra One','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light border-bottom border-5 ">
+        <div class="container-fluid " id="Introduccion">
+          <a class="navbar-brand titulo" href="index.html" style="color: #200933;">/ᐠ - ˕ -マ Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar" >
+            <ul class="navbar-nav text">
+              <li class="nav-item dropdown border-top border-bottom border-start border-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Tecnologías de Web APIs</a>
+                <ul class="dropdown-menu border-bottom border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionApi" style="color: #200933;">Definicion de Api</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionSoap" style="color: #200933;">Definicion de Soap</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasSoap" style="color: #200933;">Características de SOAP</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionRest" style="color: #200933;">Definicion de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasRest" style="color: #200933;">Características de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionToken" style="color: #200933;">¿Que es token?</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#ComponentesJson" style="color: #200933;">Componentes Json</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Microservicios</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Microservicios.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefinicionMicro" style="color: #200933;">Qué es un microservicio</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#CuandoMicro" style="color: #200933;">Cuándo utilizar microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#HerramientasMicro" style="color: #200933;">Herramientas de Microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefiniDevops" style="color: #200933;">¿Qué es DevOps? </a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PatronesMicro" style="color: #200933;">Patrones en microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#ComunicaMicro" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DiferenciasMicro" style="color: #200933;">Diferencias entre SOA y microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PreguntasMicro" style="color: #200933;">Preguntas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de una Web API</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Manejo de Contenedores</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="#Introduccion" style="color: #200933;">Introduccion</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                  <li><a class="dropdown-item text" href="#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                  <li><a class="dropdown-item text" href="#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                  <li><a class="dropdown-item text" href="#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                  <li><a class="dropdown-item text" href="#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-end border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de aplicaciones para la nube</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube" style="color: #200933;">Recomendaciones para el desarrollo en la nube </a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube2" style="color: #200933;"> Recomendaciones para el desarrollo en la nube 2</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo en la nube</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid bg-dark p-5 titulo text-center" style="color: #deb9fc;">
+        <h1>Manejo de Contenedores</h1>
+        <p>¡Bienvenido a la parte de Manejo de Contenedores!</p> 
+      </div>
+      
+      <div class="container pt-5 ">
+        <div class="border border-5">
+        <h1 class="text-center titulo" style="color: #200933;">
+            Introduccion
+        </h1>
+        <p class="container text h5 " style="color: #200933;">
+          El manejo de contenedores no es solo una tendencia, es una revolución en la forma en que desarrollamos y desplegamos software.
+En un mundo donde la agilidad, la portabilidad y la eficiencia son clave, dominar contenedores es una habilidad indispensable para cualquier desarrollador moderno.
+Gracias a herramientas como Docker y Kubernetes, hoy es posible construir aplicaciones que funcionan de forma consistente en cualquier entorno, desde tu computadora local hasta la nube.
+        </p>
+        <div class="p-2 d-flex justify-content-center align-items-center" >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" id="DefinicionConte" style="color: #200933;">¿Qué es un contenedor?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Los contenedores son paquetes ligeros que incluyen el código de las aplicaciones
+              junto con sus dependencias, como versiones concretas de entornos de ejecución de
+              ciertos lenguajes de programación y bibliotecas indispensables para ejecutar los
+              servicios de software.
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿Cuál es el uso de los contenedores?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Los contenedores constituyen un mecanismo de empaquetado lógico en el que las
+              aplicaciones pueden extraerse del entorno en que realmente se ejecutan. Esta
+              desvinculación facilita el despliegue uniforme de las aplicaciones basadas en ellos
+              con independencia de que el entorno sea un centro de datos privado, la nube pública
+              o el portátil personal de un desarrollador.
+            </p>
+            </div>
+          </div>          
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿Dónde se pueden ejecutar?</h3>        
+            <p class="m-3 text" style="color: #200933;">
+              se pueden ejecutar en cualquier parte, desde un centro de datos privado hasta la
+              nube pública o incluso el portátil personal de un desarrollador.
+            </p>
+            </div>
+          </div>
+      </div>
+
+      <div class="container row pt-5" id="permiteConte">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            ¿Si creamos contenedores, qué permite a los equipos de desarrollo?
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            La creación de contenedores permite a nuestros equipos de desarrollo moverse con
+            rapidez, desplegar software con eficacia y funcionar a una escala sin precedentes.
+          </p>
+        </div>
+        </div>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <img src="https://www.dreamhost.com/blog/wp-content/uploads/2024/04/03-Componentes-clave-docker-Docker-1024x512.jpg" class="img-fluid" width="80%" height="30%" alt="Imagen de Calculadora de Biomasa">
+        </div>
+      </div>
+
+      <div class="row pt-5" id="VentajaConte">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            ¿Ventajas de los contenedores?
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-9">
+              <h4 class="m-1 titulo" style="color: #200933;">Separación de responsabilidades</h4>
+              <p class="m-3 text" style="color: #200933;">
+                La creación en contenedores permite separar de forma clara las
+                responsabilidades, ya que los desarrolladores se centran en la lógica y las
+                dependencias de las aplicaciones, mientras que los equipos de operaciones
+                de TI se dedican a desplegarlas y gestionarlas sin preocuparse por detalles
+                concretos, como versiones de software o configuraciones específicas.
+              </p>
+            </div>
+            <div class="col-9">
+              <h4 class="m-1 titulo" style="color: #200933;">Portabilidad de las cargas de trabajo</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Como los contenedores se pueden ejecutar casi en cualquier lugar, resulta
+                    facilísimo desarrollarlos y desplegarlos en sistemas operativos Linux,
+                Windows y Mac; en máquinas virtuales o servidores físicos; en equipos de
+                desarrolladores o centros de datos on-premise; y, por supuesto, en la nube
+                pública.
+              </p>
+            </div>
+            <div class="col-9">
+              <h4 class="m-1 titulo" style="color: #200933;">Aislamiento de aplicaciones</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Los contenedores virtualizan los recursos de CPU, memoria, almacenamiento
+                y red a nivel de sistema operativo, lo que proporciona a los desarrolladores
+                una vista del sistema operativo aislado lógicamente de las demás
+                aplicaciones
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="container mt-3 text-center">
+        <h2 class="titulo" style="color: #200933;">Video Informativo</h2>
+        <p class="text" style="color: #200933;">Si quieres saber más puedes te recomendamos el siguiente video</p>
+        <div class="card " style="width:650px; margin: 0 auto;" >
+          <iframe width="660" height="315" src="https://www.youtube.com/embed/gjRoNFopFig?si=5XboBjC6AIDbswdx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="UtilizarDocker">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            ¿En dónde son utilizados Kubernetes y Docker?
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Docker y Kubernetes son dos tecnologías diferentes con casos de uso distintos.
+            Docker Desktop se utiliza para ejecutar, editar y administrar el desarrollo de
+            contenedores. Kubernetes se utiliza para ejecutar aplicaciones de producción a gran
+            escala. 
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class="row pt-5" id="TablaConte">
+        <div class="col-20">
+          <h3 class="titulo" style="color: #200933;"> Tabla de diferencias</h3>
+          <div class="border border-5">
+          <h3 class="m-3 titulo " style="color: #200933;" >
+            <pre>
+                                Concepto                    Diferencias
+            </pre>
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Kubernetes </h4>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Herramienta de orquestación de contenedores. </h4>
+            </div>
+            <div class="col-4">
+              <p class="m-3 text" style="color: #200933;">
+                Utilizan Kubernetes para administrar múltiples microservicios a gran escala.
+                <br>
+                <br>
+                Definir y ejecutar aplicaciones complejas en contenedores a escala
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Docket </h4>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Pila de tecnologías de contenedores para
+                crear y ejecutar contenedores.</h4>
+            </div>
+            <div class="col-4">
+              <p class="m-3 text" style="color: #200933;">
+                Docker para crear y administrar imágenes de contenedores.
+                <br>
+                <br>
+                Empaquetar aplicaciones con bibliotecas y tiempos de ejecución en imágenes de contenedor.
+              </p>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+      </div>
+      
+</body>
+</html>

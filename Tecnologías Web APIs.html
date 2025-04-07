@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    .text{
+        font-family: 'Winky Sans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .titulo{
+        font-family: 'Yatra One','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light border-bottom border-5 ">
+        <div class="container-fluid " id="Introduccion">
+          <a class="navbar-brand titulo" href="index.html" style="color: #200933;">/ᐠ - ˕ -マ Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar" >
+            <ul class="navbar-nav text">
+              <li class="nav-item dropdown border-top border-bottom border-start border-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Tecnologías de Web APIs</a>
+                <ul class="dropdown-menu border-bottom border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="#Introduccion" style="color: #200933;">Introduccion</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionApi" style="color: #200933;">Definicion de Api</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionSoap" style="color: #200933;">Definicion de Soap</a></li>
+                  <li><a class="dropdown-item text" href="#CaracteristicasSoap" style="color: #200933;">Características de SOAP</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionRest" style="color: #200933;">Definicion de REST</a></li>
+                  <li><a class="dropdown-item text" href="#CaracteristicasRest" style="color: #200933;">Características de REST</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionToken" style="color: #200933;">¿Que es token?</a></li>
+                  <li><a class="dropdown-item text" href="#ComponentesJson" style="color: #200933;">Componentes Json</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Microservicios</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Microservicios.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefinicionMicro" style="color: #200933;">Qué es un microservicio</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#CuandoMicro" style="color: #200933;">Cuándo utilizar microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#HerramientasMicro" style="color: #200933;">Herramientas de Microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefiniDevops" style="color: #200933;">¿Qué es DevOps? </a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PatronesMicro" style="color: #200933;">Patrones en microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#ComunicaMicro" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DiferenciasMicro" style="color: #200933;">Diferencias entre SOA y microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PreguntasMicro" style="color: #200933;">Preguntas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de una Web API</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#RecomendacionesApi" style="color: #200933;">Recomendaciones de Api</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#RecomendacionesApi2" style="color: #200933;"> Recomendaciones de Api 2</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo</a></li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Manejo de Contenedores</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Manejo de Contenedores.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-end border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de aplicaciones para la nube</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube" style="color: #200933;">Recomendaciones para el desarrollo en la nube </a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube2" style="color: #200933;"> Recomendaciones para el desarrollo en la nube 2</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo en la nube</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-5 titulo text-center" style="background-color: rgba(255, 193, 7, 0.6); color: #200933;">
+        <h1>Tecnologías de Web APIs</h1>
+        <p>¡Bienvenido a la parte de Tecnologias Web APIs!</p> 
+      </div>
+      
+      <div class="container pt-5 ">
+        <div class="border border-5">
+        <h1 class="text-center titulo" style="color: #200933;">
+            Introduccion
+        </h1>
+        <p class="container text h5 " style="color: #200933;">
+          Las Web APIs (Interfaces de Programación de Aplicaciones Web) son el puente invisible que conecta distintos sistemas, servicios y plataformas.
+          Gracias a ellas, es posible enviar mensajes, obtener información en tiempo real, conectarse con bases de datos o interactuar con servicios como mapas,
+          pagos en línea o redes sociales… ¡todo sin compartir una sola línea de código interno!
+          En este tema descubrirás las tecnologías que hacen posible la creación y el consumo de APIs modernas. Aprenderás cómo permiten desarrollar
+          aplicaciones más interactivas, escalables y conectadas, facilitando la integración entre distintos entornos, desde tu propio backend hasta servicios en la nube.
+          Prepárate para explorar un mundo donde la colaboración entre sistemas no tiene límites.
+          ¡Es momento de dominar las bases que impulsan el desarrollo web moderno!
+        </p>
+        <div class="p-2 d-flex justify-content-center align-items-center" >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" id="DefinicionApi" style="color: #200933;">Definición de API</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Mecanismos que permiten a dos componentes de software comunicarse
+              entre sí mediante un conjunto de definiciones y protocolos. (Amazon,
+              2023)
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Ejemplos de APIs</h3>
+            <ul class="ps-3 m-3 text" style="color: #200933;">
+              <li>APIs de Google: Búsqueda, Gmail, Traductor o Maps</li>
+              <li>PayPal</li>
+              <li>Incrustación de videos de YouTube</li>
+              <li>WhatsApp Business</li>
+              <li>Instagram, Facebook</li>
+            </ul>
+            </div>
+          </div>          
+          <div class="col-sm-4">
+            <h3 class="m-3 titulo" style="color: #200933;">Imagen</h3>        
+            <img src="https://www.manualweb.net/img/logos/webapi.png" class="img-fluid m-3" width="60%" height="30%" alt="">
+          </div>
+          <div class="container mt-3 text-center">
+            <h2 class="text" style="color: #200933;">Video Informativo</h2>
+            <p class="text" style="color: #200933;">Si quieres saber más puedes te recomendamos el siguiente video</p>
+            <div class="card " style="width:650px; margin: 0 auto;" >
+              <iframe width="660" height="315" src="https://www.youtube.com/embed/u2Ms34GE14U?si=PGDHfK7vAh3wcLay" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="DefinicionSoap">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Definicion Soap
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            SOAP es un protocolo de comunicación basado en XML
+            (Extensible Markup Language) que permite que
+            aplicaciones en diferentes plataformas se comuniquen
+            entre sí de manera independiente del lenguaje de
+            programación y el sistema operativo utilizados. Su nombre,
+            "Simple Object Access Protocol", enfatiza su simplicidad y
+            su capacidad para acceder a objetos en sistemas remotos a
+            través de la web.
+          </p>
+        </div>
+        </div>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <img src="https://i0.wp.com/www.disrupciontecnologica.com/wp-content/uploads/2019/12/PatronWeb.png?resize=394%2C288&ssl=1" class="img-fluid" width="60%" height="30%" alt="Imagen de Calculadora de Biomasa">
+        </div>
+      </div>
+
+      <div class="row pt-5" id="CaracteristicasSoap">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Características de SOAP
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Las principales características de SOAP incluyen:
+          </p>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">1. Basado en XML</h4>
+              <p class="m-3 text" style="color: #200933;">SOAP utiliza XML como su formato de
+                mensaje, lo que lo hace legible y comprensible tanto para
+                humanos como para máquinas.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">2. Protocolo independiente </h4>
+              <p class="m-3 text" style="color: #200933;">
+                SOAP no está vinculado a
+                ningún protocolo de transporte específico, lo que significa
+                que puede utilizarse con una variedad de protocolos, como
+                HTTP, SMTP y más.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="titulo" style="color: #200933;">3. Plataforma independiente</h4>
+              <p class="text" style="color: #200933;">
+                SOAP es independiente de la
+                plataforma y el lenguaje de programación, lo que permite
+                la interoperabilidad entre sistemas heterogéneos.
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="titulo" style="color: #200933;">4. Lenguaje neutro</h4>
+                <p class="text" style="color: #200933;">
+                    SOAP no favorece ningún lenguaje de
+                    programación en particular y se puede utilizar con
+                    cualquier lenguaje que admita la creación y el análisis de
+                    mensajes XML.
+                </p>
+            </div>
+            <div class="col-4">
+              <h4 class="titulo" style="color: #200933;">5. Extensibilidad</h4>
+                <p class="text" style="color: #200933;">
+                  SOAP permite la inclusión de información
+                  adicional en los mensajes, lo que lo hace altamente
+                  extensible y adaptable a diferentes necesidades.                  
+                </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="container mt-3 text-center">
+        <h2 class="titulo" style="color: #200933;">Video Informativo</h2>
+        <p class="text" style="color: #200933;">Si quieres saber más puedes te recomendamos el siguiente video</p>
+        <div class="card " style="width:650px; margin: 0 auto;" >
+          <iframe width="660" height="315" src="https://www.youtube.com/embed/_ZclVi4J0r4?si=sYA-ms4rd-ZZ3jiy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="DefinicionRest">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Definicion API REST
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Una API, o interfaz de programación de aplicaciones es un conjunto de reglas que denen
+            la forma en que aplicaciones o dispositivos pueden conectarse y comunicarse entre sí.
+            Una API REST es una API que se ajusta a los principios de diseño de REST, o el estilo de
+            arquitectura de transferencia de estado representacional. Por esta razón, las API REST a
+            veces se denominan API RESTful.
+            
+          </p>
+          <p class="m-3 text" style="color: #200933;">
+            REST proporciona un nivel relativamente alto de flexibilidad y libertad para los
+            desarrolladores. Esta flexibilidad es solo una de las razones por las que las API REST han
+            surgido como un método común para conectar componentes y aplicaciones en una
+            arquitectura de microservicios.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class="row pt-5" id="CaracteristicasRest">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo "style="color: #200933;" >
+            Restricciones de arquitectura
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Interfaz uniforme</h4>
+              <p class="m-3 text" style="color: #200933;">Todas las solicitudes de API para el mismo recurso deben tener el
+                mismo aspecto, sin importar de dónde provenga la solicitud. La API REST debe
+                garantizar que el mismo dato, como el nombre o la dirección de correo electrónico de
+                un usuario, pertenezca a un solo identicador uniforme de recursos (URI). Los
+                recursos no deben ser demasiado grandes, pero deben contener toda la información
+                que el cliente necesite.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Desacoplamiento cliente-servidor </h4>
+              <p class="m-3 text" style="color: #200933;">
+                En el diseño de API REST, las aplicaciones de
+                cliente y servidor deben ser completamente independientes entre sí. La única
+                información que debe conocer la aplicación del cliente es el URI del recurso
+                solicitado; no puede interactuar con la aplicación del servidor de ninguna otra
+                manera. De manera similar, una aplicación de servidor no debería modicar la
+                aplicación del cliente además de pasarla a los datos solicitados a través de HTTP.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Sin estado</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Las API REST no tienen estado, lo que signica que cada solicitud debe
+                incluir toda la información necesaria para procesarla. En otras palabras, las API REST
+                no requieren ninguna sesión del lado del servidor. Las aplicaciones de servidor no
+                pueden almacenar ningún dato relacionado con la solicitud de un cliente.
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Capacidad de caché</h4>
+              <p class="m-3 text" style="color: #200933;">Cuando sea posible, los recursos deben almacenarse en la
+                memoria caché en el lado del cliente o del servidor. Las respuestas del servidor
+                también deben contener información sobre si se permite el almacenamiento en caché
+                para el recurso entregado. El objetivo es mejorar el rendimiento en el lado del cliente,
+                mientras aumenta la escalabilidad en el lado del servidor.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Arquitectura del sistema en capas</h4>
+              <p class="m-3 text" style="color: #200933;">
+                  En las API REST, las llamadas y respuestas pasan
+                  por diferentes capas. Como regla general, no asuma que las aplicaciones cliente y
+                  servidor se conectan directamente entre sí. Puede haber varios intermediarios
+                  diferentes en el bucle de comunicación. Las API REST deben diseñarse de modo que
+                  ni el cliente ni el servidor puedan saber si se comunican con la aplicación nal o con
+                  un intermediario.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Código bajo demanda (opcional)</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Las API REST generalmente envían recursos
+                estáticos, pero en ciertos casos, las respuestas también pueden contener código
+                ejecutable (como los subprogramas de Java). En estos casos, el código solo debe
+                ejecutarse bajo demanda
+              </p>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+
+      <div class="container mt-5" id="DefinicionToken">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿QUÉ ES TOKEN?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Un token es una clave digital única
+              utilizada para autenticar o autorizar
+              el acceso a un sistema o servicio.
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h3 class="m-3 titulo" style="color: #200933;">Imagen</h3>        
+            <img src="https://www.shutterstock.com/image-illustration/jwt-acronym-json-web-token-600nw-2470407027.jpg" class="img-fluid m-3" width="75%" height="30%" alt="">
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿QUÉ ES JWT?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Un JWT es un estándar para la autenticación y
+              el intercambio de información definido por
+              RFC7519. Es posible almacenar objetos JSON de
+              forma segura y compacta. Este token es un
+              código Base64 y se puede firmar con un par de
+              claves secretas o privadas/públicas.
+            </p>
+            </div>
+           </div> 
+          </div>         
+      </div>
+
+      <div class="row pt-5" id="ComponentesJson">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo " style="color: #200933;">
+            Componentes de json web token
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Un JWT tiene tres partes: encabezado,
+            carga útil y firma, separadas por puntos
+            ( . ) quedando así;
+            (header.payload.signature)
+          </p>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Header</h4>
+              <p class="m-3 text" style="color: #200933;">Es el encabezado del JWT e incluye el
+                algoritmo de firma (alg) y el tipo de
+                token (typ). ejemplo:
+                <br>
+                { "alg": "HS256",
+                "typ": "JWT" }
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Payload</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Contiene los datos de autenticación,
+                como correos electrónicos y contraseñas.
+                ejemplo:
+                <br>
+                { "email": "nombre@alura.com.br",
+                "password": "HuEKW489!j445*" }
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Signature</h4>
+              <p class="m-3 text" style="color: #200933;">
+                La firma del JWT se genera codificando el
+                encabezado y el payload, combinándolos con una
+                clave secreta mediante el algoritmo especificado.
+                <br>
+                SHA256(base64UrlEncode(header) + "." +
+                base64UrlEncode(payload), secret_key)
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    .text{
+        font-family: 'Winky Sans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .titulo{
+        font-family: 'Yatra One','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light border-bottom border-5 ">
+        <div class="container-fluid " id="Introduccion">
+          <a class="navbar-brand titulo" href="index.html" style="color: #200933;">/ᐠ - ˕ -マ Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar" >
+            <ul class="navbar-nav text">
+              <li class="nav-item dropdown border-top border-bottom border-start border-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Tecnologías de Web APIs</a>
+                <ul class="dropdown-menu border-bottom border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionApi" style="color: #200933;">Definicion de Api</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionSoap" style="color: #200933;">Definicion de Soap</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasSoap" style="color: #200933;">Características de SOAP</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionRest" style="color: #200933;">Definicion de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasRest" style="color: #200933;">Características de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionToken" style="color: #200933;">¿Que es token?</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#ComponentesJson" style="color: #200933;">Componentes Json</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Microservicios</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Microservicios.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefinicionMicro" style="color: #200933;">Qué es un microservicio</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#CuandoMicro" style="color: #200933;">Cuándo utilizar microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#HerramientasMicro" style="color: #200933;">Herramientas de Microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefiniDevops" style="color: #200933;">¿Qué es DevOps? </a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PatronesMicro" style="color: #200933;">Patrones en microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#ComunicaMicro" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DiferenciasMicro" style="color: #200933;">Diferencias entre SOA y microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PreguntasMicro" style="color: #200933;">Preguntas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de una Web API</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Manejo de Contenedores</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Manejo de Contenedores.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-end border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de aplicaciones para la nube</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="#Introduccion" style="color: #200933;">Introduccion</a></li>
+                  <li><a class="dropdown-item text" href="#RecomendacionesNube" style="color: #200933;">Recomendaciones para el desarrollo en la nube </a></li>
+                  <li><a class="dropdown-item text" href="#RecomendacionesNube2" style="color: #200933;"> Recomendaciones para el desarrollo en la nube 2</a></li>
+                  <li><a class="dropdown-item text" href="#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo en la nube</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-5 titulo text-center" style="background-color: rgba(255, 193, 7, 0.6); color: #200933;">
+        <h1>Desarrollo de aplicaciones para la nube</h1>
+        <p>¡Bienvenido a la parte de Desarrollo de aplicaciones para la nube!</p> 
+      </div>
+      
+      <div class="container pt-5 ">
+        <div class="border border-5">
+        <h1 class="text-center titulo" style="color: #200933;">
+            Introduccion
+        </h1>
+        <p class="container text h5 " style="color: #200933;">
+          En la era digital actual, el desarrollo de aplicaciones para la nube se ha convertido en una piedra angular para la innovación tecnológica. Esta práctica permite crear soluciones escalables, flexibles y accesibles desde cualquier parte del mundo, eliminando las limitaciones de los entornos tradicionales.
+
+      A lo largo de este tema, descubrirás cómo la computación en la nube transforma la manera en que diseñamos, implementamos y desplegamos aplicaciones. Exploraremos conceptos clave como arquitectura basada en microservicios, integración continua y entrega continua (CI/CD), así como el uso de plataformas como Amazon Web Services (AWS), Microsoft Azure y Google Cloud Platform (GCP).
+
+      Prepárate para sumergirte en un enfoque moderno del desarrollo, donde la agilidad, la automatización y la alta disponibilidad son esenciales para construir experiencias digitales de alto impacto.
+        </p>
+        <div class="p-2 d-flex justify-content-center align-items-center" >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5" id="RecomendacionesNube">
+        <div class="row">
+          <h3 class="titulo" style="color: #200933;">Recomendaciones</h3>
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Selecciona la arquitectura adecuada</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Elegir entre arquitecturas monolíticas, basadas en microservicios o serverless es esencial para el éxito de tu aplicación en la nube. Evalúa los requisitos de escalabilidad, mantenimiento y rendimiento para tomar la mejor decisión.
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Optimiza para la escalabilidad</h3>
+            <ul class="ps-3 m-3 text" style="color: #200933;">
+              Asegúrate de que tu aplicación esté diseñada para escalar automáticamente según la demanda. Utiliza servicios gestionados y distribuidos, y aplica buenas prácticas como la separación de servicios y el uso de colas de mensajes.
+            </ul>
+            </div>
+          </div>          
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" id="DefinicionApi" style="color: #200933;">Implementa CI/CD</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Automatiza la integración y el despliegue continuo de tu aplicación utilizando herramientas como Jenkins, GitHub Actions o GitLab CI. Esto mejora la velocidad de entrega y reduce errores en producción.
+            </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="RecomendacionesNube2">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Fortalece la seguridad desde el diseño
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Aplica el principio de mínima privilegio, gestiona claves y secretos de forma segura y asegúrate de cifrar los datos en tránsito y en reposo. La seguridad en la nube comienza desde la planificación.
+          </p>
+        </div>
+        </div>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">
+              Utiliza infraestructura como código (IaC)
+            </h3>
+            <p class="m-3 text" style="color: #200933;">
+              Herramientas como Terraform o AWS CloudFormation te permiten gestionar tu infraestructura de manera reproducible y automatizada, lo que agiliza despliegues y facilita la escalabilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-5" id="ProcesoDesarrollo">
+        <div class="col-20">
+          <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">
+              Proceso de desarrollo de una aplicación para la nube
+            </h3>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">1. Análisis de requerimientos</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Define qué problema resuelve tu aplicación, quién la usará y cuáles son los requisitos técnicos, de seguridad y escalabilidad.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">2. Elección del proveedor de nube</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Evalúa opciones como AWS, Azure o GCP según tus necesidades de almacenamiento, computación, costos y servicios disponibles.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">3. Diseño de la arquitectura</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Define si usarás contenedores, funciones serverless, bases de datos gestionadas, balanceadores de carga, etc. Usa diagramas para visualizar flujos y dependencias.
+                </p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">4. Desarrollo</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Implementa la lógica de la aplicación utilizando lenguajes compatibles con tu entorno en la nube, y conecta con APIs o servicios externos si es necesario.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">5. Pruebas automatizadas</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Realiza pruebas unitarias, de integración y de carga para garantizar que la app se comporta correctamente bajo distintos escenarios y tráfico.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">6. Configuración CI/CD</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Automatiza los pipelines de integración y entrega continua para acelerar los despliegues y mantener calidad constante.
+                </p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">7. Despliegue</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Publica tu aplicación en el entorno productivo, configurando dominios, certificados SSL y recursos de monitoreo.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">8. Observabilidad</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Implementa logs, métricas y alertas para obtener visibilidad del estado de la aplicación y detectar errores o cuellos de botella.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">9. Escalado y mejora continua</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Optimiza recursos y procesos según el uso real. Escala horizontal o verticalmente según la demanda, y planifica nuevas funcionalidades.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3 text-center">
+        <h2 class="titulo" style="color: #200933;">Imagen</h2>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <img src="https://www.servnet.mx/hubfs/Blog/Blog_Articulos/Blog_Art%C3%ADculos/Blog_2024/Blog_Articulos_2024_Junio/portada-N74-que-son-las-aplicaciones-en-la-nube.jpg" class="img-fluid" width="60%" height="30%" alt="Imagen de Calculadora de Biomasa">
+        </div>
+      </div>
+      </div>
+
+</body>
+</html>

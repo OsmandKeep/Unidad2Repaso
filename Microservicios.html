@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    .text{
+        font-family: 'Winky Sans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .titulo{
+        font-family: 'Yatra One','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light border-bottom border-5 ">
+        <div class="container-fluid " id="Introduccion">
+          <a class="navbar-brand titulo" href="index.html" style="color: #200933;">/ᐠ - ˕ -マ Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar" >
+            <ul class="navbar-nav text">
+              <li class="nav-item dropdown border-top border-bottom border-start border-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Tecnologías de Web APIs</a>
+                <ul class="dropdown-menu border-bottom border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionApi" style="color: #200933;">Definicion de Api</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionSoap" style="color: #200933;">Definicion de Soap</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasSoap" style="color: #200933;">Características de SOAP</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionRest" style="color: #200933;">Definicion de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasRest" style="color: #200933;">Características de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionToken" style="color: #200933;">¿Que es token?</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#ComponentesJson" style="color: #200933;">Componentes Json</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Microservicios</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="#Introduccion" style="color: #200933;">Introduccion</a></li>
+                  <li><a class="dropdown-item text" href="#DefinicionMicro" style="color: #200933;">Qué es un microservicio</a></li>
+                  <li><a class="dropdown-item text" href="#CuandoMicro" style="color: #200933;">Cuándo utilizar microservicios</a></li>
+                  <li><a class="dropdown-item text" href="#HerramientasMicro" style="color: #200933;">Herramientas de Microservicios</a></li>
+                  <li><a class="dropdown-item text" href="#DefiniDevops" style="color: #200933;">¿Qué es DevOps? </a></li>
+                  <li><a class="dropdown-item text" href="#PatronesMicro" style="color: #200933;">Patrones en microservicios</a></li>
+                  <li><a class="dropdown-item text" href="#ComunicaMicro" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</a></li>
+                  <li><a class="dropdown-item text" href="#DiferenciasMicro" style="color: #200933;">Diferencias entre SOA y microservicios</a></li>
+                  <li><a class="dropdown-item text" href="#PreguntasMicro" style="color: #200933;">Preguntas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de una Web API</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de una Web API.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Manejo de Contenedores</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Manejo de Contenedores.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-end border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de aplicaciones para la nube</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube" style="color: #200933;">Recomendaciones para el desarrollo en la nube </a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube2" style="color: #200933;"> Recomendaciones para el desarrollo en la nube 2</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo en la nube</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid bg-dark p-5 titulo text-center" style="color: #deb9fc;">
+        <h1>Microservicios</h1>
+        <p>¡Bienvenido a la parte de Microservicios!</p> 
+      </div>
+      
+      <div class="container pt-5 ">
+        <div class="border border-5">
+        <h1 class="text-center titulo" style="color: #200933;">
+            Introduccion
+        </h1>
+        <p class="container text h5 " style="color: #200933;">
+          Los microservicios han revolucionado la forma en que se desarrollan las aplicaciones modernas. 
+          A diferencia de los sistemas monolíticos tradicionales, esta arquitectura divide la aplicación 
+          en pequeños servicios independientes, cada uno con una responsabilidad clara.
+
+          Gracias a los microservicios, los equipos pueden desarrollar, desplegar y escalar componentes 
+          de forma autónoma, lo que agiliza los procesos y mejora la eficiencia. Esta arquitectura es especialmente
+           útil en entornos dinámicos como la nube, donde la adaptabilidad y el rendimiento son clave.
+
+          En este tema, descubrirás cómo los microservicios están cambiando las reglas del juego en el desarrollo de software
+           y por qué se han convertido en un pilar fundamental de las aplicaciones modernas.
+        </p>
+        <div class="p-2 d-flex justify-content-center align-items-center" >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" id="DefinicionMicro" style="color: #200933;">Qué es un microservicio</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Los microservicios, o arquitectura de microservicios, son un enfoque arquitectónico nativo
+              de la nube en el que una sola aplicación se conforma de muchos componentes o servicios
+              más pequeños poco acoplados que se pueden desplegar de forma independiente.
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Qué hace la arquitectura de microservicios</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Permite que las aplicaciones sean más fáciles de escalar y más rápidas de desarrollar, lo que
+              fomenta la innovación y acelera el tiempo de comercialización de nuevas características.
+            </p>
+            </div>
+          </div>          
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Cómo funciona la arquitectura de microservicios            </h3>        
+            <p class="m-3 text" style="color: #200933;">
+              Se basa en crear aplicaciones con componentes independientes que ejecutan cada proceso
+              como un servicio. Estos servicios se comunican mediante APIs ligeras y están diseñados para
+              desempeñar funciones específicas. Gracias a su independencia, cada servicio puede
+              actualizarse, implementarse y escalarse de forma separada.
+            </p>
+            </div>
+          </div>
+      </div>
+
+      <div class="container row pt-5" id="CuandoMicro">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            ¿Cuándo utilizar microservicios?
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Cuando se requiere escalabilidad, flexibilidad tecnológica, despliegue continuo, y la
+            capacidad de manejar aplicaciones distribuidas con alta demanda.
+          </p>
+        </div>
+        </div>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <img src="https://wac-cdn.atlassian.com/dam/jcr:d76e535a-b5ad-473a-b697-26dab8b73c18/microservice_architecture_v2.png?cdnVersion=2635" class="img-fluid" width="60%" height="30%" alt="Imagen de Calculadora de Biomasa">
+        </div>
+      </div>
+
+      <div class="row pt-5" id="HerramientasMicro">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Herramientas esenciales en los microservicios
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-2">
+              <h4 class="m-3 titulo" style="color: #200933;">Contenedores</h4>
+              <p class="m-3 text" style="color: #200933;">Docker, Podman
+              </p>
+            </div>
+            <div class="col-2">
+              <h4 class="m-1 titulo" style="color: #200933;">Orquestadores</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Kubernetes, OpenShift.
+              </p>
+            </div>
+            <div class="col-2">
+              <h4 class="titulo" style="color: #200933;">Comunicación</h4>
+              <p class="text" style="color: #200933;">
+                REST, gRPC, RabbitMQ, Kafka
+              </p>
+            </div>
+            <div class="col-2">
+              <h4 class="titulo" style="color: #200933;">Monitoreo</h4>
+              <p class="text" style="color: #200933;">
+                 Prometheus, Grafana, ELK Stack.
+              </p>
+            </div>
+            <div class="col-2">
+              <h4 class="titulo" style="color: #200933;">Seguridad</h4>
+              <p class="text" style="color: #200933;">
+                OAuth, OpenID Connect, API Gateways como Kong o Apigee.
+              </p>
+            </div>
+            <div class="col-2">
+              <h4 class="titulo" style="color: #200933;">Gestión de configuración</h4>
+              <p class="text" style="color: #200933;">
+                Consul, Spring Cloud Config.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="container mt-3 text-center">
+        <h2 class="titulo" style="color: #200933;">Video Informativo</h2>
+        <p class="text" style="color: #200933;">Si quieres saber más puedes te recomendamos el siguiente video</p>
+        <div class="card " style="width:650px; margin: 0 auto;" >
+          <iframe width="660" height="315" src="https://www.youtube.com/embed/2sFczigWppk?si=vv7Jf5y3QJ-2jguQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="DefiniDevops">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            ¿Qué es DevOps?
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            Es un enfoque cultural, práctico y tecnológico que incrementa la capacidad de las
+            organizaciones para desarrollar, implementar y mantener aplicaciones rápidamente,
+            mejorando la eficiencia y reduciendo el tiempo de comercialización.
+            
+          </p>
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Relación entre microservicios y DevOps
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            La naturaleza distribuida de los microservicios fomenta un enfoque DevOps, permitiendo
+            equipos multifuncionales que desarrollan, prueban y despliegan servicios de manera
+            colaborativa.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class="row pt-5" id="PatronesMicro">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo "style="color: #200933;" >
+            Patrones en microservicios
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">API Gateway</h4>
+              <p class="m-3 text" style="color: #200933;">Punto de entrada único para clientes
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Service Discovery </h4>
+              <p class="m-3 text" style="color: #200933;">
+                Encuentra y comunica microservicios dinámicamente (Consul,Eureka)
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Circuit Breaker</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Aísla servicios con problemas para evitar fallos en cascada.
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Event Sourcing</h4>
+              <p class="m-3 text" style="color: #200933;">Registra cambios de estado como eventos
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">CQRS</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Separa operaciones de lectura y escritura para mejorar el rendimiento.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Sidecar</h4>
+              <p class="m-3 text" style="color: #200933;">
+                Agrega funcionalidades como logging y seguridad sin modificar el microservicio.
+              </p>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+
+      <div class="container mt-5" id="ComunicaMicro">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Mediante protocolos de red como APIs REST (HTTP y JSON), gRPC (para comunicación binaria
+              eficiente), mensajería asíncrona (RabbitMQ, Kafka, Amazon SQS) y eventos (arquitectura
+              basada en eventos).
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h3 class="m-3 titulo" style="color: #200933;">Imagen</h3>        
+            <img src="data:image/png;base64,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" class="img-fluid m-3" width="75%" height="30%" alt="">
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">¿Cómo se organizan los microservicios?</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Se estructuran mediante protocolos de red y comunicación, seleccionando tecnologías
+              según los requisitos de latencia, escalabilidad y fiabilidad.
+            </p>
+            </div>
+           </div> 
+          </div>         
+      </div>
+
+      <div class="row pt-5" id="DiferenciasMicro">
+        <div class="col-20">
+          <div class="border border-5">
+          <h3 class="m-3 titulo " style="color: #200933;">
+            Diferencias entre SOA y microservicios
+          </h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Granularidad</h4>
+              <p class="m-3 text" style="color: #200933;"> 
+                SOA maneja servicios más grandes, mientras que los microservicios
+                son más pequeños y especializados.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Comunicación</h4>
+              <p class="m-3 text" style="color: #200933;">
+                SOA usa ESB (Enterprise Service Bus), mientras que los
+                microservicios prefieren APIs ligeras y mensajería asincrónica.
+              </p>
+            </div>
+            <div class="col-4">
+              <h4 class="m-3 titulo" style="color: #200933;">Independencia</h4>
+              <p class="m-3 text" style="color: #200933;">
+                SOA permite compartir bases de datos y lógica empresarial; los
+                microservicios, no.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class="container mt-5">
+        <h2 class="mb-4" id="PreguntasMicro">Formulario de Microservicios</h2>
+      
+        <form id="formularioMicroservicios" onsubmit="enviarFormulario(event)">
+          <div class="mb-3">
+            <label class="form-label">1. ¿Qué es un microservicio?</label>
+            <textarea class="form-control" name="respuesta1" rows="2" required></textarea>
+          </div>
+      
+          <div class="mb-3">
+            <label class="form-label">2. ¿Quiénes son los propietarios de los servicios?</label>
+            <textarea class="form-control" name="respuesta2" rows="2" required></textarea>
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label">3. ¿Qué hace la arquitectura de microservicios?</label>
+            <textarea class="form-control" name="respuesta3" rows="2" required></textarea>
+          </div>
+      
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+  Enviar formulario
+</button>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Formulario enviado</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        ¡Enviado correctamente!
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

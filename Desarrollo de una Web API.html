@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    .text{
+        font-family: 'Winky Sans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .titulo{
+        font-family: 'Yatra One','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light border-bottom border-5 ">
+        <div class="container-fluid " id="Introduccion">
+          <a class="navbar-brand titulo" href="index.html" style="color: #200933;">/ᐠ - ˕ -マ Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="collapsibleNavbar" >
+            <ul class="navbar-nav text">
+              <li class="nav-item dropdown border-top border-bottom border-start border-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Tecnologías de Web APIs</a>
+                <ul class="dropdown-menu border-bottom border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionApi" style="color: #200933;">Definicion de Api</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionSoap" style="color: #200933;">Definicion de Soap</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasSoap" style="color: #200933;">Características de SOAP</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionRest" style="color: #200933;">Definicion de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#CaracteristicasRest" style="color: #200933;">Características de REST</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#DefinicionToken" style="color: #200933;">¿Que es token?</a></li>
+                    <li><a class="dropdown-item text" href="Tecnologías Web APIs.html#ComponentesJson" style="color: #200933;">Componentes Json</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Microservicios</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Microservicios.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefinicionMicro" style="color: #200933;">Qué es un microservicio</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#CuandoMicro" style="color: #200933;">Cuándo utilizar microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#HerramientasMicro" style="color: #200933;">Herramientas de Microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DefiniDevops" style="color: #200933;">¿Qué es DevOps? </a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PatronesMicro" style="color: #200933;">Patrones en microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#ComunicaMicro" style="color: #200933;">¿Cómo se comunican entre sí los microservicios?</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#DiferenciasMicro" style="color: #200933;">Diferencias entre SOA y microservicios</a></li>
+                    <li><a class="dropdown-item text" href="Microservicios.html#PreguntasMicro" style="color: #200933;">Preguntas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de una Web API</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="#Introduccion" style="color: #200933;">Introduccion</a></li>
+                  <li><a class="dropdown-item text" href="#RecomendacionesApi" style="color: #200933;">Recomendaciones de Api</a></li>
+                  <li><a class="dropdown-item text" href="#RecomendacionesApi2" style="color: #200933;"> Recomendaciones de Api 2</a></li>
+                  <li><a class="dropdown-item text" href="#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo</a></li>
+                </ul>
+              </li>  
+              <li class="nav-item dropdown border-top border-bottom border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Manejo de Contenedores</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Manejo de Contenedores.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#DefinicionConte" style="color: #200933;">Qué es un Contenedor</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#permiteConte" style="color: #200933;">¿Si creamos contenedores, qué permite a los equipos de desarrollo?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#VentajaConte" style="color: #200933;">Ventajas de los contenedores</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#UtilizarDocker" style="color: #200933;">¿En dónde son utilizados Kubernetes y Docker?</a></li>
+                    <li><a class="dropdown-item text" href="Manejo de Contenedores.html#TablaConte" style="color: #200933;">Tabla de diferencias</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown border-top border-bottom border-end border-5">
+                <a class="nav-link dropdown-toggle text" href="#" role="button" data-bs-toggle="dropdown" style="color: #200933;">Desarrollo de aplicaciones para la nube</a>
+                <ul class="dropdown-menu border-2 border-secondary rounded-4">
+                  <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#Introduccion" style="color: #200933;">Introduccion</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube" style="color: #200933;">Recomendaciones para el desarrollo en la nube </a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#RecomendacionesNube2" style="color: #200933;"> Recomendaciones para el desarrollo en la nube 2</a></li>
+                    <li><a class="dropdown-item text" href="Desarrollo de aplicaciones para la nube.html#ProcesoDesarrollo" style="color: #200933;">Proceso de Desarrollo en la nube</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-5 titulo text-center" style="background-color: rgba(255, 193, 7, 0.6); color: #200933;">
+        <h1>Desarrollo de una Web API</h1>
+        <p>¡Bienvenido a la parte de Desarrollo de una Web API!</p> 
+      </div>
+      
+      <div class="container pt-5 ">
+        <div class="border border-5">
+        <h1 class="text-center titulo" style="color: #200933;">
+            Introduccion
+        </h1>
+        <p class="container text h5 " style="color: #200933;">
+          El manejo de contenedores es una habilidad indispensable en el mundo del desarrollo moderno. Gracias a los contenedores, 
+          puedes empaquetar tu aplicación junto con todas sus dependencias, asegurando que se ejecute de manera consistente en cualquier entorno: 
+          ya sea en tu computadora, en un servidor o en la nube.
+
+          En este tema exploraremos herramientas clave como Docker y Kubernetes, que te permitirán no solo crear contenedores, sino también orquestarlos, 
+          gestionarlos y escalar tus aplicaciones de forma eficiente. Aprenderás a dominar el ciclo de vida de una app con prácticas modernas que garantizan agilidad, portabilidad y robustez.
+        </p>
+        <div class="p-2 d-flex justify-content-center align-items-center" >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5" id="RecomendacionesApi">
+        <div class="row">
+          <h3 class="titulo" style="color: #200933;">Recomendaciones</h3>
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Definir los objetivos de la API</h3>
+            <p class="m-3 text" style="color: #200933;">
+              Antes de comenzar a desarrollar la
+              API, es fundamental tener una comprensión clara de los problemas
+              que intentará resolver y los usuarios a los que servirá.
+            </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">Seguir estándares y convenciones.</h3>
+            <ul class="ps-3 m-3 text" style="color: #200933;">
+              Es importante seguir los
+              estándares y convenciones de la industria al desarrollar una API web.
+              Esto facilita la comprensión y el uso de la API por parte de otros
+              desarrolladores, por ejemplo seguir los principios de REST, utilizar
+              JSON o XML como formatos de intercambio de datos,etc.
+            </ul>
+            </div>
+          </div>          
+          <div class="col-sm-4 ">
+            <div class="border border-5">
+            <h3 class="m-3 titulo" id="DefinicionApi" style="color: #200933;">Documentar la API de manera exhaustiva</h3>
+            <p class="m-3 text" style="color: #200933;">
+              La documentación
+              clara y completa de la API es esencial para que otros desarrolladores
+              puedan entender cómo usarla correctamente, se pueden utilizar
+              herramientas como Swagger o Postman para generar documentación
+              automáticamente.
+            </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="container row pt-5" id="RecomendacionesApi2">
+        <div class="col">
+          <div class="border border-5">
+          <h3 class="m-3 titulo" style="color: #200933;">
+            Priorizar la seguridad
+          </h3>
+          <p class="m-3 text" style="color: #200933;">
+            La seguridad es un aspecto crucial en el
+            desarrollo de las APIs web, se deben implementar medidas de
+            seguridad como autenticación y autorización para proteger la API de
+            accesos no autorizados.
+          </p>
+        </div>
+        </div>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">
+              Versionar la API.
+            </h3>
+            <p class="m-3 text" style="color: #200933;">
+              A medida que la API evoluciona, es importante mantener la
+              compatibilidad hacia atrás, versionar la API permite introducir cambios
+              sin afectar a los usuarios existentes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-5" id="ProcesoDesarrollo">
+        <div class="col-20">
+          <div class="border border-5">
+            <h3 class="m-3 titulo" style="color: #200933;">
+              Proceso de desarrollo de una Web API
+            </h3>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">1. Análisis de requerimientos</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Identificar los requisitos funcionales y no funcionales de la API, incluidos los casos de uso y los datos que se manipularán.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">2. Planificación</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se definen los objetivos del proyecto, se asignan recursos, se estiman tiempos y costos, y se elige la metodología de desarrollo a utilizar, todo basado en los requerimientos definidos.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">3. Diseño de la API</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se definen los endpoints, métodos HTTP, parámetros de solicitud/respuesta y autenticación. Cada endpoint permite realizar operaciones como obtener, enviar o eliminar datos.
+                </p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">4. Implementación</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se desarrolla la API siguiendo el diseño propuesto utilizando frameworks como Express.js para Node.js o Flask para Python.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">5. Pruebas</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se realizan pruebas unitarias y de integración para asegurar que la API funcione correctamente y maneje adecuadamente los errores.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">6. Documentación</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se crea documentación clara con ejemplos de uso, descripciones de endpoints y casos de error, lo cual es esencial para otros desarrolladores.
+                </p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-start">
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">7. Despliegue</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se publica la API en un entorno de producción, garantizando su disponibilidad y capacidad de escalado según la demanda.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">8. Monitoreo y mantenimiento</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Se implementa monitoreo continuo para detectar errores o caídas, y se realiza mantenimiento regular para mantener la API segura y eficiente.
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="m-3 titulo" style="color: #200933;">9. Comercialización (opcional)</h4>
+                <p class="m-3 text" style="color: #200933;">
+                  Si la API está destinada a ser vendida o usada por terceros, se puede registrar en marketplaces de APIs para monetizarla y darla a conocer a otros desarrolladores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3 text-center">
+        <h2 class="titulo" style="color: #200933;">Imagen</h2>
+        <div class="col mx-auto d-block d-flex justify-content-center align-items-center">
+          <img src="https://cdn.openwebinars.net/media/uploads/2024/11/19/apifirst1.webp" class="img-fluid" width="60%" height="30%" alt="Imagen de Calculadora de Biomasa">
+        </div>
+      </div>
+      </div>
+
+</body>
+</html>
